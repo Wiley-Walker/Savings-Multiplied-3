@@ -1,0 +1,188 @@
+doctype html
+html(lang='en')
+
+head
+    meta(charset='utf-8')
+    |   
+    meta(name='description', content='nss')
+    |   
+    title Savings Multiplied
+    |   
+    link(href='http://fonts.googleapis.com/css?family=Corben', rel='stylesheet', type='text/css')
+    |   
+    link(rel='stylesheet', type='text/css', href='../css/normalize.css')
+    |   
+    link(rel='stylesheet', type='text/css', href='../css/main.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    script(src='https://cdn.firebase.com/js/client/2.2.1/firebase.js')
+
+    body
+
+
+    .row
+    .col-md-8(style="background-color: #D5F1F0") . 
+    |   
+    .col-md-2(style="background-color: #D5F1F0") 
+      .a Sign Up 
+    |   
+    .col-md-2(style="background-color: #D5F1F0") .
+
+
+    .row
+    .col-md-1(style="background-color: #D5F1F0; height: 200px")  
+    |   
+    .col-md-1
+      img.logo(src='../images/savings-multiplied-logo.png', alt='logo')
+    |  
+    .col-md-3
+    |   
+    .col-md-1 
+      img.tagline(src='../images/tagline.png', alt='tagline' style="margin-top: 140px")
+    |   
+    .col-md-5
+  
+    .col-md-1(style="background-color: #D5F1F0; height: 200px")
+         
+    .row
+    
+    
+    nav.navbar.navbar-default(style="background-color: pink")
+     
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header(style="background-color pink")
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+             
+          |       
+          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Buy
+        
+          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Sell
+             
+          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') How It Works
+          |       
+           
+          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Link
+             
+          a.navbar-brand(href='#') Community
+    .row
+    .col-md-1(style="background-color : blue; height: 800px")
+    .col-md-2(style="border-style: solid; height: 800px; background-color: green") 
+      .p(style="font-size: 20px") Limit your search by:
+       
+      input.form-control(type='text', placeholder='Search' style="width: 200px")
+      button.btn.btn-default(type='submit') Submit
+      br
+      br
+      form(action='' style="padding-right: 3cm")
+       
+
+      .p(style="font-size: 25px") Condition: New
+        input(type='radio', name='sex', value='female')
+      .p(style="font-size: 20px; margin-right: 100px") Gently Used
+        input(type='radio', name='sex', value='female')
+      br
+      br
+      .p(style="font-size: 20px") Sizes
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')  
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      br
+      br
+      .p(style="font-size: 20px") Season:
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      br  
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      br 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      br 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      br 
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+      br
+      br
+      .p(style="font-size: 20px") Type:
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
+      br  
+      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
+
+
+    .col-md-8(style="border-style: solid")
+      .row
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
+       
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
+
+        
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+       
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')         
+        
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+       
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+
+        
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+       
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+      
+        .col-xs-6.col-md-3
+             a.thumbnail(href='#')
+                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+    
+   .col-md-1(style="background-color: blue; height: 800px")
+    
+      
+
+
+
+                 
