@@ -15,7 +15,7 @@ User.prototype.login = function (username, password) {
     if (!err) {
 
       console.log('We looked for a user and no error.');
-      console.log('Here is the user:', User);
+      console.log('Here is the user:', user);
 
 
 

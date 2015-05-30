@@ -1,23 +1,26 @@
 doctype html
+html(lang='en')
 head
-  title SM: Login
+  meta(charset="utf-8")
+  meta(name="description", content="nss")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
   meta(name="viewport", content="width=device-width, initial-scale=1")
+  title SM: User Profile
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
   link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
   link(href='http://fonts.googleapis.com/css?family=Corben:400,700', rel='stylesheet', type='text/css')
+  link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
   link(rel="stylesheet", type="text/css", href="/stylesheets/main.css")
-  link(rel='stylesheet', href='/stylesheets/login.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
 
 body
-
   .container
-
     // TOP SECTION OF PAGE
     .col-md-12.rh150.light-teal
       .row
         .col-md-1
         .col-md-10.rh100.white.inner-top
-          ul.link-list.link-list-right.pad-top-20
+          ul.link-list.link-list-right
             li.pillbox.baby-blue About
             li.pillbox.green Contact
             li.pillbox.purple Blog
@@ -25,7 +28,8 @@ body
           img.img-responsive.logo(src="/images/savings-multiplied-logo.png", alt="logo")
           img.img-responsive.tag-line(src="/images/tagline.png", alt="tagline")
         .col-md-1
-
+    
+    // NAVBAR
     .row
       .col-md-12.rh50.light-pink
         nav.navbar.navbar-default
@@ -33,11 +37,13 @@ body
             // Collect the nav links, forms, and other content for toggling
             .collapse.navbar-collapse#bs-example-navbar-collapse-1
               ul.nav.navbar-nav
-                li: a(href="#") Buy
-                li: a(href="#") Profile
+                li: a(href="/buy") Buy
+                li: a(href="/index") Sell
+                li: a(href="/users/profile") Profile
                 li: a(href="#") How It Works
                 li: a(href="#") Links
                 li: a(href="#") Community
+                li: a(href="/users/logout") Logout
               form.navbar-form.navbar-nav(role="search")
                 .form-group
                   input.form-control(type="text", placeholder="Search")
@@ -45,32 +51,39 @@ body
 
     // BOTTOM SECTION OF PAGE
     .col-md-12.dark-teal.rh660
-
       .row
         .col-md-1
         .col-md-10.white.rh500
           .row
-            .col-md-6
-              h3 Please log in below or 
-                a(href="http://localhost:3000/users/register") register
-                |  for a new account
-              form(method="POST", action="/users/login", id="loginForm")
-                .formfield
-                  .formfield--prompt
-                    | Username:
-                  input(type="text", id="username", name="username")
-                .formfield
-                  .formfield--prompt
-                    | Password:
-                  input(type="password", id="password", name="password")
-                input(class="submitButton", type="submit")
+            .col-md-12
+              p Username: #{username}
+              p
+              p Number of items #{items.length}
 
-              #loginError #{message}
-              
-            .col-md-6
-              img.img-responsive.pull-right.pad-5(src="/images/twins.jpg", alt="Twins")
-              img.img-responsive.pull-right.pad-5(src="/images/triplets.jpg", alt="Triplets")
-              img.img-responsive.pull-right.pad-5(src="/images/quads.jpg", alt="Quadruplets")
+              table.table.table-hover
+                tbody
+                  tr
+                    th
+                    th: a(href="/auction?sort=title") Title
+                    th: a(href="#") Image
+                    th: a(href="/auction?sort=price") Price
+                    th: a(href="/auction?sort=endDate") End Date
+                    th
+                    th
+                each val in items
+                  tr.bookItem(id="book_#{val._id}")
+                    td: span.glyphicon.glyphicon-plus-sign(aria-hidden="true", id="#{val._id}")
+                    td: em #{val.title}
+                    td Image
+                      .additionalContent(class="showOrHide_#{val._id}")
+                        img.thumb(src="#{val.image}")
+                    td $#{val.price.toFixed(2)}
+                    - var month = val.endDate.getMonth() + 1;
+                    - var day = val.endDate.getDate();
+                    - var year = val.endDate.getFullYear();
+                    td #{month}-#{day}-#{year}
+                    td: button.btn.btn-default.btn-xs.btn-success.edit-btn(type="button", id="#{val._id}") Edit
+                    td: button.btn.btn-default.btn-xs.btn-danger.remove-btn(type="button", id="#{val._id}") Remove                
         .col-md-1
 
       .row
@@ -94,4 +107,4 @@ body
   script(src="https://code.jquery.com/jquery-1.11.2.min.js")
   script(src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
-  //script(type="text/javascript", src="/javascripts/main.js")
+  script(type="text/javascript" src="/javascripts/items.js")

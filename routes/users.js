@@ -64,17 +64,7 @@ app.get('/register', function (req, res) {
   res.render('register'); 
 });
 
-//---------------------------
-// this code will need to be edited
-//------------------------------
-// app.get("/book", function (req, res) {
-//   //console.log("inside /user/register");
-//   res.render("index",{
-//     title: "Add a Book to Your Collection",
-//     username: UserController.getCurrentUser().username,
-//     item_props:{}
-//   });
-// });
+ 
 
 
 app.post("/register", function (req, res) {

@@ -1,188 +1,173 @@
 doctype html
 html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="nss")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Savings Multiplied Part III
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
+    link(href='http://fonts.googleapis.com/css?family=Corben:400,700', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type="text/css", href="/stylesheets/auction.css")
+      
+  body
+    .container
 
-head
-    meta(charset='utf-8')
-    |   
-    meta(name='description', content='nss')
-    |   
-    title Savings Multiplied
-    |   
-    link(href='http://fonts.googleapis.com/css?family=Corben', rel='stylesheet', type='text/css')
-    |   
-    link(rel='stylesheet', type='text/css', href='../css/normalize.css')
-    |   
-    link(rel='stylesheet', type='text/css', href='../css/main.css')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
-    script(src='https://cdn.firebase.com/js/client/2.2.1/firebase.js')
-
-    body
-
-
-    .row
-    .col-md-8(style="background-color: #D5F1F0") . 
-    |   
-    .col-md-2(style="background-color: #D5F1F0") 
-      .a Sign Up 
-    |   
-    .col-md-2(style="background-color: #D5F1F0") .
-
-
-    .row
-    .col-md-1(style="background-color: #D5F1F0; height: 200px")  
-    |   
-    .col-md-1
-      img.logo(src='../images/savings-multiplied-logo.png', alt='logo')
-    |  
-    .col-md-3
-    |   
-    .col-md-1 
-      img.tagline(src='../images/tagline.png', alt='tagline' style="margin-top: 140px")
-    |   
-    .col-md-5
-  
-    .col-md-1(style="background-color: #D5F1F0; height: 200px")
-         
-    .row
-    
-    
-    nav.navbar.navbar-default(style="background-color: pink")
-     
-        // Brand and toggle get grouped for better mobile display
-        .navbar-header(style="background-color pink")
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-             
-          |       
-          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Buy
-        
-          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Sell
-             
-          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') How It Works
-          |       
-           
-          a(style="padding-right: 75px; background-color: pink" ).navbar-brand(href='#') Link
-             
-          a.navbar-brand(href='#') Community
-    .row
-    .col-md-1(style="background-color : blue; height: 800px")
-    .col-md-2(style="border-style: solid; height: 800px; background-color: green") 
-      .p(style="font-size: 20px") Limit your search by:
-       
-      input.form-control(type='text', placeholder='Search' style="width: 200px")
-      button.btn.btn-default(type='submit') Submit
-      br
-      br
-      form(action='' style="padding-right: 3cm")
-       
-
-      .p(style="font-size: 25px") Condition: New
-        input(type='radio', name='sex', value='female')
-      .p(style="font-size: 20px; margin-right: 100px") Gently Used
-        input(type='radio', name='sex', value='female')
-      br
-      br
-      .p(style="font-size: 20px") Sizes
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')  
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      br
-      br
-      .p(style="font-size: 20px") Season:
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      br  
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      br 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      br 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      br 
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-      br
-      br
-      .p(style="font-size: 20px") Type:
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female')
-      br  
-      input(style="margin-right: 2cm" type='radio', name='sex', value='female') 
-
-
-    .col-md-8(style="border-style: solid")
+      // TOP SECTION OF PAGE
+      .col-md-12.rh150.light-teal
+        .row
+          .col-md-1
+          .col-md-10.rh100.white.inner-top
+            ul.link-list.link-list-right.pad-top-20
+              li.pillbox.baby-blue About
+              li.pillbox.green Contact
+              li.pillbox.purple Blog
+              li.pillbox.pink Press
+            img.img-responsive.logo(src="/images/savings-multiplied-logo.png", alt="logo")
+            img.img-responsive.tag-line(src="/images/tagline.png", alt="tagline")
+          .col-md-1
+      
+      // NAVBAR
       .row
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
-       
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://lorempixel.com/200/200/animals/', alt='...')
+        .col-md-12.rh50.light-pink
+          nav.navbar.navbar-default
+            .light-pink
+              // Collect the nav links, forms, and other content for toggling
+              .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                ul.nav.navbar-nav
+                  li: a(href="#") Buy
+                  li: a(href="/users/profile") Profile
+                  li: a(href="#") How It Works
+                  li: a(href="#") Links
+                  li: a(href="#") Community
+                  li: a(href="/users/logout") Logout
+                form.navbar-form.navbar-nav(role="search")
+                  .form-group
+                    input.form-control(type="text", placeholder="Search")
+                  button.btn.btn-default(type="submit") Submit
 
-        
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-       
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')         
-        
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-       
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
+      // BOTTOM SECTION OF PAGE
+      .col-md-12.dark-teal.rh1000
+        .row
+          .col-md-1
+          .col-md-10.white.rh800
+            .col-md-4.rh800.green-form-auction.green-text-auction
+              .nothing
+                .nothing
+                  form(action="#", method="POST")
+                    br
+                    legend Limit your search by:
+                    input#search-terms(type="text", name="search-terms", class="input-buffer")
+                    label(for="search") Search
+                    br
+                    br
+                    legend Condition
 
-        
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-       
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')          
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-      
-        .col-xs-6.col-md-3
-             a.thumbnail(href='#')
-                 img(src='http://s3.amazonaws.com/static.texastribune.org/media/images/2013/08/19/TxTrib-TedCruz-001_jpg_800x1000_q100.jpg', alt='...')
-    
-   .col-md-1(style="background-color: blue; height: 800px")
-    
-      
+                    input(type="radio", name="condition-type", value="new")
+                    | New
+                    br
+                    input(type="radio", name="condition-type", value="gently-used")
+                    | Gently used
+                    br
+                    br
+                    legend Size
+                    input(type="radio", name="size", value="4")
+                    | 4
+                    input(type="radio", name="size", value="8", class="10pct")
+                    | 8
+                    br
+                    input(type="radio", name="size", value="5")
+                    | 5
+                    input(type="radio", name="size", value="9")
+                    | 9
+                    br
+                    input(type="radio", name="size", value="6")
+                    | 6
+                    input(type="radio", name="size", value="10")
+                    | 10
+                    br
+                    input(type="radio", name="size", value="7")
+                    | 7
+                    input(type="radio", name="size", value="11")
+                    | 11
+                    br
+                    br
+                    legend Season
+                    input(type="radio", name="season", value="all-seasons")
+                    | All seasons
+                    br
+                    input(type="radio", name="season", value="spring")
+                    | Spring
+                    br
+                    input(type="radio", name="season", value="summer")
+                    | Summer
+                    br
+                    input(type="radio", name="season", value="fall")
+                    | Fall
+                    br
+                    input(type="radio", name="season", value="winter")
+                    | Winter
+                    br
+                    legend Type
+                    input(type="radio", name="season", value="any")
+                    | Any
+                    br
+                    input(type="radio", name="season", value="one-piece")
+                    | One-piece
+                    input(type="radio", name="season", value="tops")
+                    | Tops
+                    br
+                    input(type="radio", name="season", value="bottoms")
+                    | Bottoms
+                    br
+                    br
+                    label(for="feedback-type") Brand 
+                    select(id="feedback-1", name="type")
+                      option Janie and Jack
+                      option Osh Kosh
+                      option Another brand
+                    button(type="submit") V
+                    br
+            .col-md-8.rh800
+              p All > Twin > B/G
+              label(for="feedback-type") Sort by:
+              select#feedback-2(name="type")
+                option Price
+                option Size
+                option something else
+              button#seeItems(type="submit") Submit
+              | prev | page num | next | view all
+              br
+              p Change slider value, then click Submit above to display products
+              .slider
+                label(for="minPrice") Minimum Price
+                input#minPrice(type="range", min=0, max=1000, value=0, step=10, oninput="nss.outputUpdate(value, id)")
+                output#js-minPrice(for="minPrice") 0
+              .slider
+                label(for="maxPrice") Maximum Price
+                input#maxPrice(type="range", min=0, max=1000, value=25, step=10, oninput="nss.outputUpdate(value, id)")
+                output#js-maxPrice(for="maxPrice") 25
+              #auction-items
 
+        .row
+          .col-md-12.dark-teal.rh60
+            ul.link-list.pad-top-20
+              li Link here
+              li Link here
+              li Link here
+              li Link here
+              li Link here
+      .col-md-1
 
-
-                 
+    script(src="https://code.jquery.com/jquery-1.11.2.min.js")
+    script(src="https://code.jquery.com/jquery-migrate-1.2.1.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+    script(type="text/javascript", src="/javascripts/main.js")
+    script(type="text/javascript").
+      var nss = {};
+      $(document).ready(function() {
+        nss.outputUpdate = function(price, id) {
+          $('#js-' + id).val(price);
+        }
+      });
